@@ -2,11 +2,14 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AboutComponent } from './componentes/about/about.component';
 import { CalculadoraComponent } from './componentes/calculadora/calculadora.component';
+import { CrudLocalComponent } from './componentes/crud-local/crud-local.component';
 import { EstructurasComponent } from './componentes/estructuras/estructuras.component';
+import { FormularioClaseComponent } from './componentes/formulario-clase/formulario-clase.component';
 import { HolaComponent } from './componentes/hola/hola.component';
 import { HomeComponent } from './componentes/home/home.component';
 import { LoteriaComponent } from './componentes/loteria/loteria.component';
 import { MultiplicarComponent } from './componentes/multiplicar/multiplicar.component';
+import { RegistroComponent } from './componentes/registro/registro.component';
 import { TuberiasComponent } from './componentes/tuberias/tuberias.component';
 
 const routes: Routes = [
@@ -18,6 +21,9 @@ const routes: Routes = [
   {path: "hola/:nombre/:apellidos", component:HolaComponent},
   {path: "tuberias", component:TuberiasComponent},
   {path: "estructuras", component:EstructurasComponent},
+  {path: "formulario", component:FormularioClaseComponent},
+  {path: "crud", component:CrudLocalComponent},
+  {path: "registro", component:RegistroComponent},
   {path: "**", component:HomeComponent}
 ];
 
