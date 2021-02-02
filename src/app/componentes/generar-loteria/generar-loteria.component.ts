@@ -6,9 +6,9 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./generar-loteria.component.css']
 })
 export class GenerarLoteriaComponent implements OnInit {
-  digito: number
-  @Input() entrada: number
-  @Input()objetoEntrada = {nombre:"", apellido:""}
+  digito: number = undefined
+  @Input() entrada: number = null
+  @Input() objetoEntrada: {nombre:string;apellido:string}
   constructor() { }
 
   ngOnInit(): void {  }

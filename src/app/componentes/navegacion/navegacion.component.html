@@ -1,47 +1,42 @@
-<nav class="navbar navbar-expand-sm navbar-light bg-light">
-    <a class="navbar-brand" href="#">Navbar</a>
+<nav class="navbar navbar-expand-sm sticky-top bg-white">
+  <div class="container">
+    <a class="navbar-brand" routerLink="/">Angular DAW</a>
     <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
         aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="collapsibleNavId">
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-            <li class="nav-item active">
-                <a class="nav-link" routerLink="/">Home <span class="sr-only">(current)</span></a>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/home" routerLinkActive="{{estiloActivo}}">Home</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" routerLink="/about">About</a>
+                <a class="nav-link" routerLink="/about" routerLinkActive="{{estiloActivo}}">About</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" routerLink="/loteria">Lotería</a>
+                <a class="nav-link" routerLink="/loteria" routerLinkActive="{{estiloActivo}}">Lotería</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" routerLink="/calculadora">Calculadora</a>
+                <a class="nav-link" routerLink="/calculadora" routerLinkActive="{{estiloActivo}}">Calculadora</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" routerLink="/tuberias">Tuberías</a>
+                <a class="nav-link" routerLink="/tuberias" routerLinkActive="{{estiloActivo}}">Tuberías</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" routerLink="/estructuras">Estructuras</a>
+                <a class="nav-link" routerLink="/estructuras" routerLinkActive="{{estiloActivo}}">Estructuras</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" routerLink="/formulario">Formulario</a>
+                <a class="nav-link" routerLink="/formulario" routerLinkActive="{{estiloActivo}}">Formulario</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" routerLink="/crud">Crud Local</a>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-                <div class="dropdown-menu" aria-labelledby="dropdownId">
-                    <a class="dropdown-item" href="#">Action 1</a>
-                    <a class="dropdown-item" href="#">Action 2</a>
-                </div>
+                <a class="nav-link" routerLink="/crud" routerLinkActive="{{estiloActivo}}">Crud Local</a>
             </li>
         </ul>
         <ul class="navbar-nav mt-2 mt-lg-0">
             <li class="nav-item">
-                <a class="nav-link" routerLink="/registro">Registro</a>
+                <a class="nav-link" routerLink="/registro" routerLinkActive="{{estiloActivo}}">Registro</a>
             </li>
         </ul>
     </div>
+  </div>
 </nav>

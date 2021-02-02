@@ -13,7 +13,7 @@ export class RegistroComponent implements OnInit {
     apellidos: new FormControl('',[Validators.required]),
     password: new FormControl('',[Validators.required]),
     email: new FormControl('',[Validators.required, Validators.email]),
-    dni: new FormControl('',[Validators.required]),
+    dni: new FormControl('',[Validators.required, dniValido()]),
     telefono: new FormControl(undefined, [Validators.required, telefonoValido()])
   })
   formRegister2 = this.fb.group({

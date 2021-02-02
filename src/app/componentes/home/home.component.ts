@@ -9,7 +9,7 @@ import { Usuario } from 'src/app/clases/usuario';
 export class HomeComponent implements OnInit, OnDestroy {
 
   variable: string= "texto de prueba"
-  num1: number = 0
+  num1: number = null
   usuarios = [
     {nombre: "Manolo", apellido: "López"},
     {nombre: "Rocío", apellido: "García"},

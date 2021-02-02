@@ -24,7 +24,7 @@ const routes: Routes = [
   {path: "formulario", component:FormularioClaseComponent},
   {path: "crud", component:CrudLocalComponent},
   {path: "registro", component:RegistroComponent},
-  {path: "**", component:HomeComponent}
+  {path: "**", component: HomeComponent}
 ];
 
 @NgModule({
