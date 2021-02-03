@@ -9,7 +9,9 @@ import { NotasService } from 'src/app/servicios/notas.service';
   styleUrls: ['./crud.component.css']
 })
 export class CrudComponent implements OnInit {
+  notaSeleccionada: Note = new Note
   formNuevo: FormGroup = new FormGroup({
+    id: new FormControl(),
     titulo: new FormControl('',[Validators.required]),
     contenido: new FormControl('',[Validators.required])
   })
@@ -29,12 +31,33 @@ export class CrudComponent implements OnInit {
       error => console.log(error)
     )
   }
-  crearNota(): void{
-    this.servicio.insertarNota(this.notaNueva).subscribe(
+  crearNota(entrada:Note): void{
+    this.servicio.insertarNota(entrada).subscribe(
       respuesta => {
         console.log(respuesta)
+        this.formNuevo.reset()
         this.obtenerNotas()
-      }
+      },
+      error => {console.log(error)}
+    )
+  }
+  eliminarNota(): void{
+    this.servicio.borrarNota(this.formNuevo.value.id).subscribe(
+      respuesta => {console.log(respuesta)
+      this.formNuevo.reset()
+      this.obtenerNotas()
+      },
+      error => {console.log(error)}
+    )
+  }
+  editarNota(): void{
+    this.servicio.editarNota(this.formNuevo.value).subscribe(
+      respuesta => {
+        console.log(respuesta)
+        this.notaSeleccionada = new Note
+        this.obtenerNotas()
+      },
+      error => {console.log(error)}
     )
   }
 }
