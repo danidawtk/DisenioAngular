@@ -9,6 +9,9 @@ import { NotasService } from 'src/app/servicios/notas.service';
   styleUrls: ['./crud.component.css']
 })
 export class CrudComponent implements OnInit {
+  creada: boolean = false
+  temporizador: any = null
+  busqueda: string
   notaSeleccionada: Note = new Note
   formNuevo: FormGroup = new FormGroup({
     id: new FormControl(),
@@ -36,6 +39,8 @@ export class CrudComponent implements OnInit {
       respuesta => {
         console.log(respuesta)
         this.formNuevo.reset()
+        this.creada = true
+        setTimeout(() => this.creada=false,3000)
         this.obtenerNotas()
       },
       error => {console.log(error)}
@@ -59,5 +64,19 @@ export class CrudComponent implements OnInit {
       },
       error => {console.log(error)}
     )
+  }
+  buscarNotas(): void{
+    this.servicio.buscarNotas(this.busqueda).subscribe(
+      respuesta => {
+        console.log(respuesta)
+        this.notas = respuesta
+      },
+      error => console.log(error)
+    )
+  }
+  buscarConRetraso(): void{
+    if(this.temporizador==null){
+    this.temporizador = setTimeout(() => {this.buscarNotas();this.temporizador=null},3000)
+    }
   }
 }

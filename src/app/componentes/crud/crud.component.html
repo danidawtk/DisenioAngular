@@ -1,6 +1,9 @@
 <ul>
     <li *ngFor="let nota of notas" (click)="formNuevo.patchValue(nota)">{{nota.titulo}} : {{nota.contenido}}</li>
 </ul>
+<div *ngIf='creada' class="alert alert-primary" role="alert">
+    <strong>Nota creada correctamente</strong>
+</div>
 <br>
 <h5>Formulario con formGroup</h5>
 <form [formGroup]='formNuevo' (ngSubmit)='crearNota(formNuevo.value)'>
@@ -20,4 +23,8 @@
     <input class="form-control" type="text" [(ngModel)]="notaNueva.titulo" placeholder="Título">
     <input class="form-control" type="text" [(ngModel)]="notaNueva.contenido" placeholder="Contenido">
     <button  class="btn btn-primary btn-block" (click)="crearNota(notaNueva)">Insertar nota</button>
+</div>
+<div class="input-group">
+    <input (input)='buscarConRetraso()' class="form-control" type="text" [(ngModel)]="busqueda" placeholder="Buscar...">
+   
 </div>
