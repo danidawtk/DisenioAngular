@@ -1,6 +1,9 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AboutComponent } from './componentes/about/about.component';
+import { LoginComponent } from './componentes/auth/login/login.component';
+import { PerfilComponent } from './componentes/auth/perfil/perfil.component';
+import { RegisterComponent } from './componentes/auth/register/register.component';
 import { CalculadoraComponent } from './componentes/calculadora/calculadora.component';
 import { CrudLocalComponent } from './componentes/crud-local/crud-local.component';
 import { CrudComponent } from './componentes/crud/crud.component';
@@ -25,7 +28,9 @@ const routes: Routes = [
   {path: "formulario", component:FormularioClaseComponent},
   {path: "crudlocal", component:CrudLocalComponent},
   {path: "crud", component:CrudComponent},
-  {path: "registro", component:RegistroComponent},
+  {path: "registro", component:RegisterComponent},
+  {path: "login", component:LoginComponent},
+  {path: "perfil", component:PerfilComponent},
   {path: "**", component: HomeComponent}
 ];
 
