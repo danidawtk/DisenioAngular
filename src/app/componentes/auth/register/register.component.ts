@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { UserService } from 'src/app/servicios/user.service';
 import { dniValido, telefonoValido } from 'src/app/validaciones/validaciones';
-import { runInThisContext } from 'vm';
 
 @Component({
   selector: 'app-register',
@@ -22,6 +21,7 @@ export class RegisterComponent implements OnInit {
   constructor(private fb:FormBuilder, private servicioUsuario:UserService) { }
 
   ngOnInit(): void {
+    
   }
 submit(): void{
   if (this.formRegister.value.password == this.formRegister.value.password2){
