@@ -9,7 +9,7 @@ import { UserService } from 'src/app/servicios/user.service';
 })
 export class NavegacionComponent implements OnInit {
   estiloActivo: string = "active text-dark sombra"
-  
+  fnLogged = this.servicioUsuario.isLogged
   constructor(private servicioUsuario:UserService, private irHacia:Router) { }
 
   ngOnInit(): void {
@@ -18,7 +18,5 @@ export class NavegacionComponent implements OnInit {
     this.servicioUsuario.logOut()
     this.irHacia.navigate(['/login'])
   }
-  fnLogged(): boolean {
-    return this.servicioUsuario.isLogged()
-  }
+
 }
