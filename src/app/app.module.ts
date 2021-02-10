@@ -59,7 +59,10 @@ import { EnviarTokenInterceptor } from './auth/enviar-token.interceptor';
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [{provide:LOCALE_ID, useValue:"es"}, {provide: HTTP_INTERCEPTORS, useClass:EnviarTokenInterceptor, multi:true}],
+  providers: [
+    {provide:LOCALE_ID, useValue:"es"},
+    {provide: HTTP_INTERCEPTORS, useClass:EnviarTokenInterceptor, multi:true}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
