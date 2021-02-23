@@ -1,0 +1,26 @@
+<div class="card">
+    <div class="card-body">
+        <h4 class="card-title">Listar usuarios </h4>
+        <ul>
+            <li (click)='usuarioSel=user; formMensaje.patchValue({idDestinatario:user.id})' *ngFor='let user of usuarios'>{{ user.nombre }}{{user.email}}
+                <img src="{{user.imgSrc}}" width="50px" *ngIf='user.imgSrc'>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="card" *ngIf='usuarioSel'>
+    <div class="card-body">
+        <h4 class="card-title">Nombre</h4>
+        <p class="card-text">{{usuarioSel.nombre}}</p>
+        <h4 class="card-title">Apellido</h4>
+        <p class="card-text">{{usuarioSel.apellidos}}</p>
+        <h4 class="card-title">Email</h4>
+        <p class="card-text">{{usuarioSel.email}}</p>
+    </div>
+    <div class="card-body">
+        <form [formGroup]='formMensaje' (submit)='escribirMensaje()'>
+            <input type="text" formControlName='mensaje' placeholder="Escribe aqui">
+            <button type="submit" [disabled]='!formMensaje.valid'>Enviar mensaje</button>
+        </form>
+    </div>
+</div>

@@ -2,3 +2,7 @@
   box-shadow: 0 0 10px rgba(0,0,0,.1);
   border-radius: 0.4em;
 }
+.body {
+  background-image: url(img/fond1.jpg);
+  background-size: cover;
+}

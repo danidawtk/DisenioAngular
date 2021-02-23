@@ -5,3 +5,8 @@ th,td {
   font-size: 1.2em;
   text-align: center;
 }
+*{
+  background-color: #363535;
+  color: darkgray;
+  font-family: 'Times New Roman', Times, serif;
+}

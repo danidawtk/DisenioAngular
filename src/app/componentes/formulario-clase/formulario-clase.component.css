@@ -1,3 +1,8 @@
 .list-group-item{
   font-size: 1.3em;
 }
+*{
+  background-color: #363535;
+  color: darkgray;
+  font-family: 'Times New Roman', Times, serif;
+}

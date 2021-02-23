@@ -6,3 +6,9 @@
 .sombra{
   text-shadow: 0 0 1em rgba(0,0,0,.1);
 }
+
+*{
+  background-color: #363535;
+  color: darkgray;
+  font-family: 'Times New Roman', Times, serif;
+}

@@ -1,9 +1,24 @@
 .list-group-item{
   font-size: 1.3em;
   font-style: italic;
+  background-color: #363535;
+  color: darkgray;
+  font-family: 'Times New Roman', Times, serif;
 }
 
 .jumbotron{
   padding : 4rem 2rem;
   border-radius: 1em;
+  background-color: #363535;
+  color: darkgray;
+  font-family: 'Times New Roman', Times, serif;
+}
+.row{
+  color: darkgray;
+  font-family: 'Times New Roman', Times, serif;
+}
+*{
+  background-color: #363535;
+  color: darkgray;
+  font-family: 'Times New Roman', Times, serif;
 }
